@@ -37,12 +37,12 @@ const Login = () => {
   return (
     <div>
       {userLoggedIn && <Navigate to={"/home"} replace={true} />}
-
-      <main className="w-full h-screen flex ">
-        <div className=" bg-cover bg-center">
-          <img src={image} className="h-full w-full object-cover" />
+      <div className="w-full h-screen flex ">
+        <div className="">
+          <img src={image} className="h-full w-full object-cover " />
         </div>
-        <div className="w-full text-gray-600 space-y-5 p-4 ">
+        <div className="rounded-bl-xl rounded-tl-xl w-full">
+          <div className="w-full text-gray-600 space-y-5 p-4">
           <div className="text-center">
             <div className="mt-2">
               <h3 className="text-gray-800 text-5xl font-semibold sm:text-5xl p-16 mt-4">
@@ -94,7 +94,7 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <p className="text-center text-sm">
+          <p className="text-center text-lg">
             Don't have an account?{" "}
             <Link to={"/register"} className="hover:underline font-bold">
               Sign up
@@ -125,7 +125,9 @@ const Login = () => {
             </button>
           </div>
         </div>
-      </main>
+        </div>
+        
+      </div>
     </div>
   );
 };
